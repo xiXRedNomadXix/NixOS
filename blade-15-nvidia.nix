@@ -11,17 +11,12 @@
     driSupport32Bit = true;
   };
 
-  # Disable Novue
-  services.xserver.videoDrivers = [ "nvidia" ]
-
   # Load nvidia driver for Xorg and Wayland
   services.xserver.videoDrivers = ["nvidia"];
 
   # Packages
   environment.systemPackages = with pkgs; [
-  nvidia-x11
-  nvidia-settings
-  nvidia-persistenced
+  linuxKernel.packages.linux_zen.nvidia_x11_production
   # Packages for running GPU for pure computing
   cudaPackages.cudnn
   cudaPackages.cudatoolkit
@@ -56,12 +51,9 @@
         # accessible via `nvidia-settings`.
     nvidiaSettings = true;
 
-    # Optionally, you may need to select the appropriate driver version for your specific GPU.
-    package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
-  ...
 
-{
+
   hardware.nvidia.prime = {
     sync.enable = true;
 
@@ -69,8 +61,4 @@
     nvidiaBusId = "PCI:Your nvidia bus ID here";
     intelBusId = "PCI:Your intel bus ID here";
   };
-}
-
-
-
 }

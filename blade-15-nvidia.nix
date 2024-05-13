@@ -1,12 +1,3 @@
-# Most of this is from the NixOS wiki
-# 1. sudo nano /etc/nixos/blade-15-nvidia.nix
-# 2. copy and paste this configuration into the file.
-# 3. Save and exit the file
-# 4. sudo nano /etc/nixos/configuration.nix
-# 5. Add "./blade-15-nvidia.nix" to the import string at the top of the configuration.
-# 6. Run the following command: sudo nixos-rebuild switch
-
-
 { config, lib, pkgs, ... }:
 {
 

@@ -39,3 +39,13 @@ Your laptop should boot up successfully and you should be able to use your Nvidi
 
 ### Volume Control
 The volume control does not curently work. I will be troubleshooting this and updating this configuration file to include the fix.
+
+##### Tested with Hashcat benchmarking
+```
+nix-shell -p hashcat
+```
+
+```
+hashcat -b
+```
+

@@ -22,6 +22,10 @@
   nvidia-x11
   nvidia-settings
   nvidia-persistenced
+  # Packages for running GPU for pure computing
+  cudaPackages.cudnn
+  cudaPackages.cudatoolkit
+  cudaPackages.cudnn_8_8
 ];
 
   hardware.nvidia = {

@@ -71,8 +71,8 @@
     sync.enable = true;
 
     # Make sure to use the correct Bus ID values for your system!
-    nvidiaBusId = "PCI: Your nvidia bus ID here";
-    intelBusId = "PCI: Your intel bus ID here";
+    nvidiaBusId = "PCI:Your nvidia bus ID here";
+    intelBusId = "PCI:Your intel bus ID here";
   };
 }
 

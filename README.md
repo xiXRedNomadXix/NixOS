@@ -35,3 +35,7 @@ Once this is done run the following command to apply the changes:
 sudo nixos-rebuild switch
 ```
 Your laptop should boot up successfully and you should be able to use your Nvidia GPU.
+
+
+### Volume Control
+The volume control does not curently work. I will be troubleshooting this and updating this configuration file to include the fix.

@@ -8,9 +8,11 @@ If you don't already have wget or dont want it as part of your packages, you can
 nix-shell -p wget
 ```
 
-Now, copy the blade-15-nvidia.nix file into the /etc/nixos/ directory with the following command:
+Now, copy the blade-15-nvidia.nix file and move it into the /etc/nixos/blade-15-nvidia.nix directroy:
 ```
-sudo wget https://raw.githubusercontent.com/xiXRedNomadXix/NixOS/main/blade-15-nvidia.nix?token=GHSAT0AAAAAACSGJSSAMVK7QRIRIYRCGDKWZSBOFMA -o /etc/nixos/blade-15-nvidia.nix
+sudo wget https://raw.githubusercontent.com/xiXRedNomadXix/NixOS/main/blade-15-nvidia.nix -o /home/$USER/Downloads/blade-15-nvidia.nix
+
+mv ~/Downloads/blade-15-nvidia.nix /etc/nixos/blade-15-nvidia.nix
 ```
 
 Next, find the PCI Bus ID for Nvidia and Intel cards with the following comand:

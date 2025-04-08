@@ -40,7 +40,19 @@ Your laptop should boot up successfully and you should be able to use your Nvidi
 
 
 ### Volume Control
-The volume control does not curently work. I will be troubleshooting this and updating this configuration file to include the fix.
+For audio, you can use pipewire by adding this to your nix config:
+```
+
+  hardware.pulseaudio.enable = false;
+  security.rtkit.enable = true;
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
+  };
+```
+To control your audio, I personally also recommend including pulseaudio in your environment.systemPackages, as this should work natively with razer's function keys (fn+F1/F2/F3) on the Razer Blade Advanced 15, and should also work with the standard Razer Blade.
 
 ##### Tested with Hashcat benchmarking
 ```
